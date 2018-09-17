@@ -1,5 +1,5 @@
-#include "Vshuman"
-#include "Vscomp"
+#include "Vshuman.h"
+#include "Vscomp.h"
 
 void menu (){
 printf ("World of batleships \n Please chose type of game \n 1 : 2 players \n 2 : VS Computer\n");
