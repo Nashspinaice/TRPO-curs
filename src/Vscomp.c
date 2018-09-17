@@ -1,15 +1,14 @@
+#include "Fieldfullcomp.c"
 void Vscomp (){
 #include "fieldfull.c"
 
 int field1[12][12], field2[12][12], checkcomp[10][10], compax, compay;
-char fielda1[12][12], fielda2[12][12];
+char fielda1[12][12];char fielda2[12][12];
 int h1=20, h2=20, ax=0, ay=0, schx=0, schy=0, check, voz;
 printf("Please place your ships player ! \n Press any key to continue");
-std::cin.ignore();
-system("CLS");
-fieldfull1(field1);
-std::cin.ignore();
-system("CLS");
+system("PAUSE");
+fieldfull(field1);
+system("PAUSE");
 for (schy=0; schy<=10;schy++){
 field1[0][schy]=schy;
 field1[schy][0]=schy;
@@ -17,7 +16,7 @@ field2[0][schy]=schy;
 field2[schy][0]=schy;
 }
 printf("Press any key to start the game");
-std::cin.ignore();
+system("PAUSE");
 Fieldfullcomp(field2);
 for (schx=1;schx<=10;schx++){
 for (schy=1;schy<=10;schy++){
@@ -69,7 +68,7 @@ fielda1[ax][ay]='*';
 field2[ax][ay]=0;
 h2--;
 printf("You hit it!\n One more shoot!");
-std::cin.ignore();
+system("PAUSE");
 system("CLS");
 for (schy=1;schy<=10;schy++){
 printf("\n");
@@ -86,7 +85,7 @@ printf("%d",field1[schx][schy]);
 }
 }
 }
-std::cin.ignore();
+system("PAUSE");
 system("CLS"); //////////////////////////// âòîðîé èãðîê
 /*for (schy=0;schy<=10;schy++)
 {
@@ -117,10 +116,10 @@ while (check == 1){
 compax=rand()%10;
 compay=rand()%10;
 voz=0;
-if (checkcomp[compax][compay]=1){
+if (checkcomp[compax][compay]==1){
 voz=1;
 printf("Check");
-std::cin.ignore();
+system("PAUSE");
 system("CLS");
 break;
 }
@@ -130,48 +129,18 @@ if (field1[compax][compay]==0){
 field1[compax][compay]=9;
 check--;
 printf("miss");
-std::cin.ignore();
+system("PAUSE");
 system("CLS");
 }
 if (field1[compax][compay]==1){
 //fielda2[compax][compay]='*';
 field1[compax][compay]=9;
 printf("done");
-std::cin.ignore();
+system("PAUSE");
 system("CLS");
 }
 }
 }
 }
 }
-void Fieldfullcomp(int field2[12][12]){
-int xy, yx;
-for (int n = 10; n>0; n--){
-if (n>9){
-xy=rand()%6;
-yx=rand()%10;
-field2[xy][yx]=1;
-field2[xy+1][yx]=1;
-field2[xy+2][yx]=1;
-field2[xy+3][yx]=1;
-}
-if (n>7 && n<=9){
-xy=rand()%7;
-yx=100%(rand()%10-10);
-field2[xy][yx]=1;
-field2[xy+1][yx]=1;
-field2[xy+2][yx]=1;
-}
-if (n>4 && n<=7){
-xy=rand()%8;
-yx=100%(rand()%10-10);
-field2[xy][yx]=1;
-field2[xy+1][yx]=1;
-}
-else{
-xy=rand()%8;
-yx=100%(rand()%10-10);
-field2[xy][yx]=1;
-}
-}
-}
+

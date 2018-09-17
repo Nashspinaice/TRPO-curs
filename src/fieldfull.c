@@ -5,7 +5,7 @@ for(yk=0; yk<=14; yk++)
 field1[xk][yk]=0;
 }
 while (k>=1){
-scanf(%d,n);
+scanf("%d",&n);
 system("CLS");
 switch(n){
 case 55:{
@@ -391,7 +391,7 @@ printf("%d", field1[yk][xk]);}
 printf("\n");
 }
 printf("INVAID PLASE PRESS ANY KEY TO CONTINUE");
-std::cin.ignore();
+system("PAUSE");
 break;
 }
 }
@@ -411,7 +411,7 @@ printf("%d", field1[yk][xk]);}
 printf("\n");
 }
 printf("INVAID PLASE PRESS ANY KEY TO CONTINUE");
-std::cin.ignore();
+system("PAUSE");
 break;
 }
 }
@@ -432,7 +432,7 @@ break;
 }
 else{
 printf("INVAID PLASE PRESS ANY KEY TO CONTINUE");
-std::cin.ignore();
+system("PAUSE");
 break;
 }
 }
@@ -451,7 +451,7 @@ break;
 }
 else{
 printf("INVAID PLASE PRESS ANY KEY TO CONTINUE");
-std::cin.ignore();
+system("PAUSE");
 break;
 }
 }
