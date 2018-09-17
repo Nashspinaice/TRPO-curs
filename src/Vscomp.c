@@ -5,10 +5,10 @@ int field1[12][12], field2[12][12], checkcomp[10][10], compax, compay;
 char fielda1[12][12], fielda2[12][12];
 int h1=20, h2=20, ax=0, ay=0, schx=0, schy=0, check, voz;
 printf("Please place your ships player ! \n Press any key to continue");
-getch();
+std::cin.ignore();
 system("CLS");
 fieldfull1(field1);
-getch();
+std::cin.ignore();
 system("CLS");
 for (schy=0; schy<=10;schy++){
 field1[0][schy]=schy;
@@ -17,7 +17,7 @@ field2[0][schy]=schy;
 field2[schy][0]=schy;
 }
 printf("Press any key to start the game");
-getch();
+std::cin.ignore();
 Fieldfullcomp(field2);
 for (schx=1;schx<=10;schx++){
 for (schy=1;schy<=10;schy++){
@@ -69,7 +69,7 @@ fielda1[ax][ay]='*';
 field2[ax][ay]=0;
 h2--;
 printf("You hit it!\n One more shoot!");
-getch();
+std::cin.ignore();
 system("CLS");
 for (schy=1;schy<=10;schy++){
 printf("\n");
@@ -86,7 +86,7 @@ printf("%d",field1[schx][schy]);
 }
 }
 }
-getch();
+std::cin.ignore();
 system("CLS"); //////////////////////////// âòîðîé èãðîê
 /*for (schy=0;schy<=10;schy++)
 {
@@ -120,7 +120,7 @@ voz=0;
 if (checkcomp[compax][compay]=1){
 voz=1;
 printf("Check");
-getch();
+std::cin.ignore();
 system("CLS");
 break;
 }
@@ -130,14 +130,14 @@ if (field1[compax][compay]==0){
 field1[compax][compay]=9;
 check--;
 printf("miss");
-getch();
+std::cin.ignore();
 system("CLS");
 }
 if (field1[compax][compay]==1){
 //fielda2[compax][compay]='*';
 field1[compax][compay]=9;
 printf("done");
-getch();
+std::cin.ignore();
 system("CLS");
 }
 }
