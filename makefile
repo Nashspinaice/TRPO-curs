@@ -5,26 +5,27 @@ create:
 	mkdir -p build
 	mkdir -p bin
 
-bin/main: build/main.o build/menu.o build/fieldfull.o build/Vscomp.o    build/Vshuman.o
-	g++ -Wall -Werror build/main.o build/menu.o build/fieldfull.o build/Vscomp.o    build/Vshuman.o -o bin/main
+bin/main: build/main.o build/menu.o build/fieldfull.o build/Vscomp.o    	build/Vshuman.o
+	gcc -Wall -Werror build/main.o build/menu.o build/fieldfull.o 		build/Vscomp.o    build/Vshuman.o -o bin/main
 
-build/main.o: src/main.cpp
-	g++ -Wall -Werror -c src/main.cpp -o build/main.o
 
-build/menu.o: build/menu.cpp
-	g++ -Wall -Werror -c src/menu.cpp -o build/menu.o
+build/main.o: src/main.c
+	gcc -Wall -Werror -c src/main.c -o build/main.o
 
-build/fieldfull.o: src/fieldfull.cpp
-	g++ -Wall -Werror -c src/fieldfull.cpp -o build/fieldfull.o
+build/menu.o: src/menu.c
+	gcc -Wall -Werror -c src/menu.c -o build/menu.o
 
-build/Vscomp.o: src/Vscomp.cpp
-	g++ -Wall -Werror -c src/Vsvomp.cpp -o build/Vscomp.o
+build/fieldfull.o: src/fieldfull.c
+	gcc -Wall -Werror -c src/fieldfull.c -o build/fieldfull.o
 
-build/Vshuman.o: src/Vshuman.cpp
-	g++ -Wall -Werror -c src/Vshuman.cpp -o build/Vshuman.o
+build/Vscomp.o: src/Vscomp.c
+	gcc -Wall -Werror -c src/Vsvomp.c -o build/Vscomp.o
+
+build/Vshuman.o: src/Vshuman.c
+	gcc -Wall -Werror -c src/Vshuman.c -o build/Vshuman.o
 	
 
 .PHONY: clean
 
 clean:
-rm -rf build/*.o
+	rm -rf build/*.o
