@@ -5,12 +5,12 @@ int field1[12][12], field2[12][12];
 char fielda1[12][12], fielda2[12][12];
 int h1=20, h2=20, ax=0, ay=0, schx=0, schy=0, check;
 printf("Please place your ships player 1! \n Press any key to continue");
-getch();
+std::cin.ignore();
 system("CLS");
 fieldfull1(field1);
 system("CLS");
 printf("Please place your ships player 2! \n Press any key to continue");
-getch();
+std::cin.ignore();
 system("CLS");
 fieldfull1(field2);
 for (schy=0; schy<=10;schy++){
@@ -20,7 +20,7 @@ field2[0][schy]=schy;
 field2[schy][0]=schy;
 }
 printf("Press any key to start the game");
-getch();
+std::cin.ignore();
 for (schx=1;schx<=10;schx++){
 for (schy=1;schy<=10;schy++){
 fielda1[schx][schy]='-';
@@ -63,7 +63,7 @@ if (field2[ax][ay]==1){
 fielda1[ax][ay]='*';
 field2[ax][ay]=0;
 printf("You hit it!\n One more shoot!");
-getch();
+std::cin.ignore();
 system("CLS");
 for (schy=1;schy<=10;schy++){
 printf("\n");
@@ -80,7 +80,7 @@ printf("%d",field1[schx][schy]);
 }
 }
 }
-getch();
+std::cin.ignore();
 system("CLS"); //////////////////////////// âòîðîé èãðîê
 for (schy=0;schy<=10;schy++){
 printf("\n");
@@ -108,7 +108,7 @@ if (field1[ax][ay]==1){
 fielda2[ax][ay]='*';
 field1[ax][ay]=0;
 printf("You hit it!\n One more shoot!");
-getch();
+std::cin.ignore();
 system("CLS");
 for (schy=0;schy<=10;schy++){
 printf("\n");
@@ -125,7 +125,7 @@ printf("%d",field2[schx][schy]);
 
 }
 }
-getch();
+std::cin.ignore();
 }
 printf("Nice play!");
 } 
