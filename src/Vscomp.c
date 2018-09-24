@@ -3,7 +3,7 @@ void Vscomp (){
 #include "fieldfull.c"
 
 int field1[12][12], field2[12][12], checkcomp[10][10], compax, compay;
-char fielda1[12][12];char fielda2[12][12];
+char fielda1[12][12];//char fielda2[12][12];
 int h1=20, h2=20, ax=0, ay=0, schx=0, schy=0, check, voz;
 printf("Please place your ships player ! \n Press any key to continue");
 system("PAUSE");
@@ -21,14 +21,14 @@ Fieldfullcomp(field2);
 for (schx=1;schx<=10;schx++){
 for (schy=1;schy<=10;schy++){
 fielda1[schx][schy]='-';
-fielda2[schx][schy]='-';
+//fielda2[schx][schy]='-';
 }
 }
 for (schy=0; schy<=9;schy++){
 fielda1[0][schy]=48+schy;
 fielda1[schy][0]=48+schy;
-fielda2[0][schy]=48+schy;
-fielda2[schy][0]=48+schy;
+//fielda2[0][schy]=48+schy;
+//fielda2[schy][0]=48+schy;
 }
 
 //fielda1[0][10]='10';
