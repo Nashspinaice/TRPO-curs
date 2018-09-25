@@ -1,5 +1,5 @@
 #include "Fieldfullcomp.c"
-#include "fieldfull.c"
+#include "fieldfull1.c"
 #include <stdio.h>
 #include <stdlib.h>
 void Vscomp (){
@@ -10,7 +10,7 @@ char fielda1[12][12];//char fielda2[12][12];
 int h1=20, h2=20, ax=0, ay=0, schx=0, schy=0, check, voz;
 printf("Please place your ships player ! \n Press any key to continue");
 system("PAUSE");
-fieldfull(field1);
+fieldfull1(field1);
 system("PAUSE");
 for (schy=0; schy<=10;schy++){
 field1[0][schy]=schy;
