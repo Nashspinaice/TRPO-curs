@@ -1,6 +1,9 @@
 #include "Fieldfullcomp.c"
-void Vscomp (){
 #include "fieldfull.c"
+#include <stdio.h>
+#include <stdlib.h>
+void Vscomp (){
+
 
 int field1[12][12], field2[12][12], checkcomp[10][10], compax, compay;
 char fielda1[12][12];char fielda2[12][12];
