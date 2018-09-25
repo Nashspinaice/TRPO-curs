@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "fieldfull.c"
+#include "fieldfull1.c"
 
 void Vshuman(){
 int field1[12][12], field2[12][12];
@@ -9,12 +7,12 @@ int h1=20, h2=20, ax=0, ay=0, schx=0, schy=0, check;
 printf("Please place your ships player 1! \n Press any key to continue");
 system("PAUSE");
 system("CLS");
-fieldfull(field1);
+fieldfull1(field1);
 system("CLS");
 printf("Please place your ships player 2! \n Press any key to continue");
 system("PAUSE");
 system("CLS");
-fieldfull(field2);
+fieldfull1(field2);
 for (schy=0; schy<=10;schy++){
 field1[0][schy]=schy;
 field1[schy][0]=schy;
